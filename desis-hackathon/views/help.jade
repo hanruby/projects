@@ -1,0 +1,134 @@
+|	<br/><br/>
+
+table(style="min-height: 400px;")
+	tr(style="width:100%")
+		td(style="width:25%;vertical-align: top").
+			<div class="logo">
+				<div class="head">
+					<div class="l_specsend"></div>
+					<div class="l_specs">
+						<div class="l_specsinner eyeContainer" rel="l_eye">
+							<div id="l_eye" class="l_eye">
+								<div class="l_eyeinner"></div>
+							</div>
+						</div>
+					</div>
+					<div class="r_specs">
+						<div class="r_specsinner eyeContainer" rel="r_eye">
+							<div id="r_eye" class="r_eye">
+								<div class="r_eyeinner"></div>
+							</div>
+						</div>
+					</div>
+					<div class="m_specs"></div>
+					<div class="r_specsend"></div>
+					<div style="clear: both"></div>
+					<div class="mouth">
+						<div class="tooth"></div>
+						<div class="tooth"></div>
+						<div class="bluetooth"></div>
+						<div class="tooth"></div>
+					</div>
+					<div style="clear: both"></div>
+					<div class="l_ear">
+						<div class="l_earinner"></div>
+					</div>
+					<div class="r_ear">
+						<div class="r_earinner"></div>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="l_arm">
+					<div class="l_bottomhand"></div>
+					<div class="l_forehand"></div>
+					<div class="l_wrist">
+						<div class="l_wristinner"></div>
+					</div>
+				</div>
+				<div class="l_leg">
+					<div class="l_legtop"></div>
+					<div class="l_legmiddle"></div>
+					<div class="l_legbottom"></div>
+				</div>
+				<div class="r_leg">
+					<div class="r_legtop"></div>
+					<div class="r_legmiddle"></div>
+					<div class="r_legbottom"></div>
+				</div>
+				<div class="r_arm">
+					<div class="r_bottomhand"></div>
+					<div class="r_forehand"></div>
+					<div class="r_wrist">
+						<div class="r_wristinner"></div>
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		td(style="width:75%; vertical-align: top")
+			h1 Help
+			<p class="c0"><span class="c1 c5">Generating your SSH Keys</span></p>
+			<p class="c0"><span class="c5 c4">Step 1 : </span></p>
+			<p class="c0"><span class="c4">Do you already have one, then step 3 ? If not proceed further.</span></p>
+			<p class="c0"><span>cd ~/.ssh</span></p>
+			<p class="c0"><span># Checks to see if there is a directory named &quot;.ssh&quot; in your user directory. If you used the default convention then there would be a file called id_rsa.pub</span></p>
+			<p class="c0 c2"><span class="c5"></span></p>
+			<p class="c0"><span class="c5">Step 2: </span></p>
+			<p class="c0"><span class="c6">ssh-keygen -t rsa -C &quot;</span><span class="c7 c6"><a class="c3" href="mailto:your_email@youremail.com">your_email@youremail.com</a></span><span class="c6">&quot;</span></p>
+			<p class="c0"><span class="c6"># Creates a new ssh key using the provided email<br /># Generating public/private rsa key pair.<br /># Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]</span></p>
+			<p class="c0 c2"><span class="c6 c4"></span></p>
+			<p class="c0"><span class="c6"># </span><span class="c6">Enter passphrase (empty for no passphrase): [Type a passphrase]<br /># Enter same passphrase again: [Type passphrase again]</span></p>
+			<p class="c0"><span class="c6">Your identification has been saved in /c/Users/you/.ssh/id_rsa.</span></p>
+			<p class="c0"><span class="c6"><br /># Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.<br /># The key fingerprint is:<br /># 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@youremail.com</span></p>
+			<p class="c0 c2"><span class="c6 c4"></span></p>
+			<p class="c0"><span class="c6 c4">Don&rsquo;t worry any email address would do :)</span></p>
+			<p class="c0 c2"><span class="c6 c4"></span></p>
+			<p class="c0"><span class="c5 c4">Step 3: </span><span class="c4">Give us your public key ! (Contents of id_rsa.pub)</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0"><span class="c1 c5">Set up git on:</span></p>
+			<p class="c0"><span class="c1 c5">&nbsp;</span></p>
+			<p class="c0"><span class="c5 c4">Windows</span><span class="c4">: </span><span class="c7 c4"><a class="c3" href="https://help.github.com/articles/set-up-git#platform-windows">https://help.github.com/articles/set-up-git#platform-windows</a></span><span class="c4">&nbsp;</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0"><span class="c5 c4">Mac</span><span class="c4">: </span><span class="c7 c4"><a class="c3" href="https://help.github.com/articles/set-up-git#platform-mac">https://help.github.com/articles/set-up-git#platform-mac</a></span><span class="c4">&nbsp;</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0"><span class="c5 c4">Linux</span><span class="c4">: </span><span class="c7 c4"><a class="c3" href="https://help.github.com/articles/set-up-git#platform-linux">https://help.github.com/articles/set-up-git#platform-linux</a></span><span class="c4">&nbsp;</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0"><span class="c4">New to git ? Then &nbsp;</span><span class="c7"><a class="c3" href="http://progit.org/book/ch1-3.html">take a crash course.</a></span><span class="c4">&nbsp;</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0"><span class="c4">Running into issues even after following the doc ? Then use this </span><span class="c7 c4"><a class="c3" href="http://lmgtfy.com/">service</a></span><span class="c4">&nbsp;:-)</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0"><span class="c1 c5">Clone/Commit/Push changes to your repository</span></p>
+			<p class="c0 c2"><span class="c1 c5"></span></p>
+			<p class="c0"><span class="c4">To clone your repository: </span></p>
+			<p class="c0"><span class="c6 c4">$ git clone git@bigbang:&lt;userid&gt;.git</span></p>
+			<p class="c0 c2"><span class="c6 c4"></span></p>
+			<p class="c0"><span class="c4">To commit:</span></p>
+			<p class="c0"><span class="c6 c4">$ touch foo.txt</span></p>
+			<p class="c0"><span class="c6 c4">$ git commit -a foo.txt -m &ldquo;First commit&rdquo;</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0"><span class="c4">To push your changes:</span></p>
+			<p class="c0"><span class="c6 c4">$ git push origin master</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0"><span class="c4">Yay!!</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0 c2"><span class="c1 c5"></span></p>
+			<p class="c0"><span class="c1 c5">Internet Connectivity</span></p>
+			<p class="c0"><span class="c4">Use the &ldquo;desis-hackathon&rdquo; wifi network &nbsp;and the password is </span><span class="c6 c4">hackathon. </span></p>
+			<p class="c0"><span class="c4">We recommend you to use wired connections though. </span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0 c2"><span class="c1 c5"></span></p>
+			<p class="c0"><span class="c1 c5">Need to discuss something ?</span></p>
+			<p class="c0"><span class="c4">If you need to discuss something extensively with other participants during the event, then use the forum : </span><span class="c4 c7"><a class="c3" href="http://bigbang/phpbb3">http://bigbang/phpbb3</a></span><span class="c4">&nbsp;(Thanks Mahesh!)</span></p>
+			<p class="c0 c2"><span class="c4"></span></p>
+			<p class="c0"><span class="c1 c5">Softwares?</span></p>
+			<p class="c0"><span class="c1">We have already downloaded some basic softwares for you</span></p>
+			<p class="c0"><span class="c1">* Eclipse - 32 | 64 bit!</span></p>
+			<p class="c0"><span class="c1">* SQL Express</span></p>
+			<p class="c0"><span class="c1">* Git Bash (for windows)</span></p>
+			<p class="c0 c2"><span class="c1"></span></p>
+			<p class="c0"><span class="c1">You can find them in C:\local\Softwares on the training room PC&rsquo;s.</span></p>
+			<p class="c0"><span class="c1">&nbsp;</span></p>
+			<p class="c0"><span class="c1 c5">Admin account details for training room PC&rsquo;s? </span></p>
+			<p class="c0"><span class="c1">username: .\temp-admin</span></p>
+			<p class="c0"><span class="c1">password: temp-admin</span></p>

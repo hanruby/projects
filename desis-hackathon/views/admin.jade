@@ -1,0 +1,127 @@
+|	<br/><br/>
+table
+	tr(style="width:100%")
+		td(style="width:30%; vertical-align: top").
+			<div class="logo">
+				<div class="head">
+					<div class="l_specsend"></div>
+					<div class="l_specs">
+						<div class="l_specsinner eyeContainer" rel="l_eye">
+							<div id="l_eye" class="l_eye">
+								<div class="l_eyeinner"></div>
+							</div>
+						</div>
+					</div>
+					<div class="r_specs">
+						<div class="r_specsinner eyeContainer" rel="r_eye">
+							<div id="r_eye" class="r_eye">
+								<div class="r_eyeinner"></div>
+							</div>
+						</div>
+					</div>
+					<div class="m_specs"></div>
+					<div class="r_specsend"></div>
+					<div style="clear: both"></div>
+					<div class="mouth">
+						<div class="tooth"></div>
+						<div class="tooth"></div>
+						<div class="bluetooth"></div>
+						<div class="tooth"></div>
+					</div>
+					<div style="clear: both"></div>
+					<div class="l_ear">
+						<div class="l_earinner"></div>
+					</div>
+					<div class="r_ear">
+						<div class="r_earinner"></div>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="l_arm">
+					<div class="l_bottomhand"></div>
+					<div class="l_forehand"></div>
+					<div class="l_wrist">
+						<div class="l_wristinner"></div>
+					</div>
+				</div>
+				<div class="l_leg">
+					<div class="l_legtop"></div>
+					<div class="l_legmiddle"></div>
+					<div class="l_legbottom"></div>
+				</div>
+				<div class="r_leg">
+					<div class="r_legtop"></div>
+					<div class="r_legmiddle"></div>
+					<div class="r_legbottom"></div>
+				</div>
+				<div class="r_arm">
+					<div class="r_bottomhand"></div>
+					<div class="r_forehand"></div>
+					<div class="r_wrist">
+						<div class="r_wristinner"></div>
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			<div>
+		td(style='width:60%')
+			!= msg 
+			h2 View Management
+			<br/><a href="javascript:loadView('/')">Index</a><br/>
+			<a href="javascript:loadView('/iuse')">I Use</a><br/>
+			<a href="javascript:loadView('/graffiti')">Graffiti Wall</a><br/>
+			<a href="javascript:loadView('/timer')">Timer</a><br/>
+			<a href="javascript:loadView('/factsheet')">FactSheet</a><br/>
+			hr
+
+			h2 Announcement
+			form(method="post",action="/admin/postmessage")
+				<textarea id="ann_msg" name="msg" onkeypress="updateAnnMessageCount();return imposeMaxLength(this, 400);" onkeydown="updateAnnMessageCount();" style="margin: 2px; width: 100%; height: 80px; box-sizing: border-box;"></textarea><span style="float:right;"><span id="ann_msg_ct">400</span>&nbsp;&nbsp;<input type="submit" value="Post" id="ann_send" class="small button blue"/></span><div style="clear:both"></div>
+			hr
+
+			h2 Photo Management
+			form(method="post",action="/admin/addalbum")
+				table
+					tr
+						td
+							label Folder name:
+						td
+							input(type="text", name="foldername")
+					tr
+						td
+							label Album name:
+						td
+							input(type="text", name="albumname")
+					tr
+						td
+						td(style="text-align: right")
+							input(type="submit", value="Post", class="medium button blue")
+			hr
+
+			h2 User Management
+			form(method="post",action="/admin/adduser")
+				table
+					tr
+						td
+							label User Id:
+						td
+							input(type="text", name="userid")
+					tr
+						td
+							label User name:
+						td
+							input(type="text", name="username")
+					tr
+						td
+							label Password:
+						td
+							input(type="text", name="password")
+					tr
+						td
+						td(style="text-align: right")
+							input(type="submit", value="Create", class="medium button blue")
+							input(type="reset", value="Reset", class="medium button blue")
+			hr
+			h2 Graffiti Wall
+			<a href="/admin">Save</a> | <a href="/admin/cleargraffiti">Clear</a>
+
+

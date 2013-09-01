@@ -1,0 +1,12 @@
+#buzz_update_list, #git_update_list {
+    height: 265px;
+    padding-left: 0px;
+    overflow: auto;
+}
+
+#buzz_update_list li, #git_update_list li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #DDDDDD;
+    list-style-type: none;
+}

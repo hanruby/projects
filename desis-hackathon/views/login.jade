@@ -1,0 +1,87 @@
+|	<br/><br/>
+
+table
+	tr(style="width:100%")
+		td(style="width:30%; border-right: dotted 1px #000000").
+			<div class="logo">
+				<div class="head">
+					<div class="l_specsend"></div>
+					<div class="l_specs">
+						<div class="l_specsinner eyeContainer" rel="l_eye">
+							<div id="l_eye" class="l_eye">
+								<div class="l_eyeinner"></div>
+							</div>
+						</div>
+					</div>
+					<div class="r_specs">
+						<div class="r_specsinner eyeContainer" rel="r_eye">
+							<div id="r_eye" class="r_eye">
+								<div class="r_eyeinner"></div>
+							</div>
+						</div>
+					</div>
+					<div class="m_specs"></div>
+					<div class="r_specsend"></div>
+					<div style="clear: both"></div>
+					<div class="mouth">
+						<div class="tooth"></div>
+						<div class="tooth"></div>
+						<div class="bluetooth"></div>
+						<div class="tooth"></div>
+					</div>
+					<div style="clear: both"></div>
+					<div class="l_ear">
+						<div class="l_earinner"></div>
+					</div>
+					<div class="r_ear">
+						<div class="r_earinner"></div>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="l_arm">
+					<div class="l_bottomhand"></div>
+					<div class="l_forehand"></div>
+					<div class="l_wrist">
+						<div class="l_wristinner"></div>
+					</div>
+				</div>
+				<div class="l_leg">
+					<div class="l_legtop"></div>
+					<div class="l_legmiddle"></div>
+					<div class="l_legbottom"></div>
+				</div>
+				<div class="r_leg">
+					<div class="r_legtop"></div>
+					<div class="r_legmiddle"></div>
+					<div class="r_legbottom"></div>
+				</div>
+				<div class="r_arm">
+					<div class="r_bottomhand"></div>
+					<div class="r_forehand"></div>
+					<div class="r_wrist">
+						<div class="r_wristinner"></div>
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			<div>
+		td(style='width:60%; vertical-align: top; padding-left: 20px;')
+			div
+				h2 Login
+				!= msg 
+				form(method="post",action="/login")
+					table
+						tr
+							td
+								label User Id:
+							td
+								input(type="text", name="userid")
+						tr
+							td
+								label Password:
+							td
+								input(type="password", name="password")
+						tr
+							td
+							td(style="text-align: right")
+								input(type="submit", value="Login", class="medium button blue")
+								input(type="reset", value="Reset", class="medium button blue")

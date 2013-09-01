@@ -1,0 +1,91 @@
+|	<br/><br/>
+
+table(style="min-height: 400px")
+	tr(style="width:100%")
+		td(style="width:30%;vertical-align: top").
+			<div class="logo">
+				<div class="head">
+					<div class="l_specsend"></div>
+					<div class="l_specs">
+						<div class="l_specsinner eyeContainer" rel="l_eye">
+							<div id="l_eye" class="l_eye">
+								<div class="l_eyeinner"></div>
+							</div>
+						</div>
+					</div>
+					<div class="r_specs">
+						<div class="r_specsinner eyeContainer" rel="r_eye">
+							<div id="r_eye" class="r_eye">
+								<div class="r_eyeinner"></div>
+							</div>
+						</div>
+					</div>
+					<div class="m_specs"></div>
+					<div class="r_specsend"></div>
+					<div style="clear: both"></div>
+					<div class="mouth">
+						<div class="tooth"></div>
+						<div class="tooth"></div>
+						<div class="bluetooth"></div>
+						<div class="tooth"></div>
+					</div>
+					<div style="clear: both"></div>
+					<div class="l_ear">
+						<div class="l_earinner"></div>
+					</div>
+					<div class="r_ear">
+						<div class="r_earinner"></div>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="l_arm">
+					<div class="l_bottomhand"></div>
+					<div class="l_forehand"></div>
+					<div class="l_wrist">
+						<div class="l_wristinner"></div>
+					</div>
+				</div>
+				<div class="l_leg">
+					<div class="l_legtop"></div>
+					<div class="l_legmiddle"></div>
+					<div class="l_legbottom"></div>
+				</div>
+				<div class="r_leg">
+					<div class="r_legtop"></div>
+					<div class="r_legmiddle"></div>
+					<div class="r_legbottom"></div>
+				</div>
+				<div class="r_arm">
+					<div class="r_bottomhand"></div>
+					<div class="r_forehand"></div>
+					<div class="r_wrist">
+						<div class="r_wristinner"></div>
+					</div>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		td(style="width:70%; vertical-align: top")
+			!= msg
+			if ann != null && ann.type == "album"
+				h2 
+					= ann.albumName
+				div#myCarousel.carousel.slide
+					div.carousel-inner
+						each file in ann.files
+							div.item
+								img(src="/images/albums/" + ann.folderName + "/" + file, style="width: 100%; height:600px")
+					a.carousel-control.left(href="#myCarousel", data-slide="prev")
+						&lsaquo;
+					a.carousel-control.right(href="#myCarousel", data-slide="next")
+						&rsaquo;
+
+			if ann != null && ann.type == "message"
+				h2 
+					= ann.msg
+
+			if ann != null && ann.type == "group"
+				h2 Announcements
+				ul
+					each msg in ann.msgs
+						li
+							!= msg
