@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+	<servlet>
+		<servlet-name>savemarks</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.SavemarksServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>savemarks</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddBookmarks</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.AddBookmarkServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddBookmarks</servlet-name>
+		<url-pattern>/AddBookmarkServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteBookmarkServlet</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.DeleteBookmarkServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteBookmarkServlet</servlet-name>
+		<url-pattern>/DeleteBookmarkServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateBookmarkServlet</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.UpdateBookmarkServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateBookmarkServlet</servlet-name>
+		<url-pattern>/UpdateBookmarkServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginGoogle</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.LoginGoogleServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginGoogle</servlet-name>
+		<url-pattern>/LoginGoogle</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginGoogleCallback</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.LoginGoogleCallbackServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginGoogleCallback</servlet-name>
+		<url-pattern>/LoginGoogleCallback</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SendMailServlet</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.SendMailServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SendMailServlet</servlet-name>
+		<url-pattern>/SendMailServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CategoryBookmarkServlet</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.CategoryBookmarkServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CategoryBookmarkServlet</servlet-name>
+		<url-pattern>/CategoryBookmarkServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SignOutServlet</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.SignOutServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignOutServlet</servlet-name>
+		<url-pattern>/SignOutServlet</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>WebsiteDetailsServlet</servlet-name>
+		<servlet-class>com.code.savemarks.servlets.WebsiteDetailsServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebsiteDetailsServlet</servlet-name>
+		<url-pattern>/WebsiteDetailsServlet</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>Savemarks.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.eatifying.dao.RestaurantMenuMapper">
+
+	<!-- insert id="addRestaurant" parameterClass="com.eatifying.commons.domain.Restaurant"> 
+		</insert -->
+
+	<select id="getRestaurantMenu" parameterType="int"
+		resultType="com.eatifying.commons.domain.restaurant.RestaurantMenu">
+			SELECT  a.restaurant_id as 'restaurantId',
+        			b.restaurant_menu_id as 'restaurantMenuId',
+        			b.added_time as 'addedTime',
+        			b.updated_time as 'updatedTime'
+			FROM eatifying.restaurant a
+        	JOIN eatifying.restaurant_menu_details b
+            	ON (a.restaurant_id = b.restaurant_id)
+        	WHERE a.restaurant_id = #{id}# 
+	</select>
+	
+	<select id="getRestaurantMenuItems" parameterType="int"
+		resultType="com.eatifying.commons.domain.restaurant.RestaurantMenuItem">
+			SELECT 	c.restaurant_menu_id as 'restuaurantMenuId',
+               	    c.item_id as 'itemId',
+               		c.item_name as 'itemName',
+	                d.category_id as 'category.categoryId',
+	                d.category_name as 'category.categoryName',
+	            	c.sort_order as 'sortOrder',
+	                c.cusine_id as 'cusineId',
+	                c.description as 'description',
+	                c.price as 'price',
+	                c.taste_type as 'tasteType',
+	               	c.number_of_times_ordered as 'numberOfTimesOrdered',
+		            c.likes as 'likes'
+	        FROM eatifying.restaurant a
+	        JOIN eatifying.restaurant_menu_details b
+	            ON (a.restaurant_id = b.restaurant_id)
+	        JOIN eatifying.restaurant_menu c
+	            ON(b.restaurant_menu_id = c.restaurant_menu_id)
+	        JOIN eatifying.restaurant_menu_item_category d
+	            ON(c.category_id = d.category_id)
+	        WHERE a.restaurant_id = #{id}# 
+	</select>
+	
+	<select id="getRestaurantMenuItemById" parameterType="int"
+		resultType="com.eatifying.commons.domain.restaurant.RestaurantMenuItem">
+			SELECT 	c.restaurant_menu_id as 'restuaurantMenuId',
+               	    c.item_id as 'itemId',
+               		c.item_name as 'itemName',
+	                d.category_id as 'category.categoryId',
+	                d.category_name as 'category.categoryName',
+	            	c.sort_order as 'sortOrder',
+	                c.cusine_id as 'cusineId',
+	                c.description as 'description',
+	                c.price as 'price',
+	                c.taste_type as 'tasteType',
+	               	c.number_of_times_ordered as 'numberOfTimesOrdered',
+		            c.likes as 'likes'
+	        FROM eatifying.restaurant a
+	        JOIN eatifying.restaurant_menu_details b
+	            ON (a.restaurant_id = b.restaurant_id)
+	        JOIN eatifying.restaurant_menu c
+	            ON(b.restaurant_menu_id = c.restaurant_menu_id)
+	        JOIN eatifying.restaurant_menu_item_category d
+	            ON(c.category_id = d.category_id)
+	        WHERE c.item_id = #{id}# 
+	</select>
+	
+	
+
+</mapper>

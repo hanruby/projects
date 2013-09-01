@@ -1,0 +1,33 @@
+<div id="underConstructionModalBox" style="display:none">
+	<strong>This feature is under constuction</strong>
+</div>
+<div id="joinUsModalBox" style="display:none">
+	<fieldset class="labels-left narrow">
+		<div class="alert-message error" id="signin-error" style="display: none; "></div>
+		<p>
+			<label for="join-username">Username:</label>
+			<span><input type="text" id="join-username" class="validate['required','%validateUsername']" name="username" value="" autocomplete="off" /></span>
+		</p>
+		<p>
+			<label for="join-email">E-mail:</label>
+			<span><input type="text" id="join-email" class="validate['required','email']" name="email" value="" autocomplete="off" /></span>
+		</p>
+		<p>
+			<label for="join-password">Password:</label>
+			<span><input type="password" id="join-password" class="validate['required']" name="password" value="" autocomplete="off" /></span>
+		</p>
+	</fieldset>
+</div>
+<div id="signInModalBox" style="display:none">
+	<fieldset class="labels-left narrow">
+		<div class="alert-message error" id="signin-error" style="display: none; "></div>
+		<p>
+			<label for="join-username">Username:</label>
+			<span><input type="text" id="join-username" class="validate['required','%validateUsername']" name="username" value="" autocomplete="off" /></span>
+		</p>
+		<p>
+			<label for="join-password">Password:</label>
+			<span><input type="password" id="join-password" class="validate['required']" name="password" value="" autocomplete="off" /></span>
+		</p>
+	</fieldset>
+</div>

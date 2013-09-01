@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>BillRack - Home</title>
+<link href="/web/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/web/datepicker/css/datepicker.css" rel="stylesheet"
+	media="screen">
+<link href="/web/css/main.css" rel="stylesheet" media="screen">
+</head>
+<body>
+	<h1>BillRack</h1>
+	<button onclick="showAddBill();">Add Bill</button>
+	<div id="addBill" class="modal hide fade post-modal">
+	</div>
+	
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="/web/js/bootstrap.min.js"></script>
+	<script src="/web/js/main.js"></script>
+	<script src="/web/datepicker/js/bootstrap-datepicker.js"></script>
+	<script>
+		$(function() {
+
+			$('#dp1').datepicker({
+				format : 'mm-dd-yyyy'
+			});
+			$('#dp2').datepicker({
+				format : 'mm-dd-yyyy'
+			});
+		});
+	</script>
+</body>
+</html>

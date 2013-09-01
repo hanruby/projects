@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/gson-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/jdom.jar"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/json-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/jsoup-0.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/rome-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/rome-fetcher-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/twitter4j-core-2.1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Dass/My Projects/Dependencies/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="F:/personel/My Projects/My Project read/references/jericho-html-3.2/samples/webapps/JerichoHTML/WEB-INF/lib/jericho-html-3.2.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

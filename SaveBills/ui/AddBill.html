@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>BillRack - Add Bill</title>
+<link href="/web/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/web/datepicker/css/datepicker.css" rel="stylesheet"
+	media="screen">
+<link href="/web/css/main.css" rel="stylesheet" media="screen">
+</head>
+<body>
+	<div class="container">
+		<center>
+			<h2>Add Bill</h2>
+		</center>
+		<form name=addBillForm method="post" enctype="multipart/form-data"
+			action="/savebill/">
+			{% csrf_token %}
+			<legend>Bill Details</legend>
+			<table>
+				<tr>
+					<td>Bill Name</td>
+					<td>:</td>
+					<td><input type=text name=bill_name></td>
+				</tr>
+				<tr>
+					<td>Bill Number</td>
+					<td>:</td>
+					<td><input type=text name=bill_number></td>
+				</tr>
+				<tr>
+					<td>Bill Image</td>
+					<td>:</td>
+					<td><input type=file name=bill_image></td>
+				</tr>
+				<!-- 
+				<tr>
+					<td>Description</td>
+					<td>:</td>
+					<td><textarea name="description"></textarea></td>
+				</tr>
+				<tr>
+					<td>Tags</td>
+					<td>:</td>
+					<td><select name=tags>
+							<option>medical</option>
+							<option>food</option>
+							<option>electronic</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Bill Date</td>
+					<td>:</td>
+					<td>
+						<div class="well">
+							<input type="text" class="span2" value="02-16-2012" id="dp1">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Folder</td>
+					<td>:</td>
+					<td><select name=folder>
+							<option>All</option>
+							<option>food</option>
+							<option>electronic</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Warranty EndDate</td>
+					<td>:</td>
+					<td>
+						<div class="well">
+							<input type="text" class="span2" value="02-16-2012" id="dp2">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Warranty Image</td>
+					<td>:</td>
+					<td><input type=file name=warrantyimage></td>
+				</tr>
+			</table> -->
+				<!--  <legend>Product Details</legend>
+			<table name="product1">
+				<tr>
+					<td>Name</td>
+					<td>:</td>
+					<td><input type=text name="prod1name"></td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td>:</td>
+					<td><textarea name="prod1desc"></textarea></td>
+				</tr>
+			</table>
+			-->
+		</form>
+		<div class="actions">
+			<button class="btn btn-primary" type="button"
+				onclick="submitAddBill();closeDialog();">Save changes</button>
+			&nbsp;
+			<button type="reset" class="btn">Cancel</button>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="/web/js/bootstrap.min.js"></script>
+	<script src="/web/datepicker/js/bootstrap-datepicker.js"></script>
+	<script>
+		$(function() {
+
+			$('#dp1').datepicker({
+				format : 'mm-dd-yyyy'
+			});
+			$('#dp2').datepicker({
+				format : 'mm-dd-yyyy'
+			});
+		});
+	</script>
+</body>
+</html>

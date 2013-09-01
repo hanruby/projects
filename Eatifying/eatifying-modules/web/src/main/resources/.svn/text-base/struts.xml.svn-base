@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<include file="struts-default.xml" />
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.action.extension" value="mnd"/> 
+	
+	<package name="default" extends="struts-default">
+		
+		<action name="hello" class="helloAction">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<action name="home" class="eatifyingHomeAction">
+			<result name="success">/home_new.jsp</result>
+		</action>
+
+		<action name="find-n-order" class="listRestaurantsAction" method="listRestaurants" >
+			<result name="unauthorized">/unauthorized.jsp</result>
+			<result name="success">/list_new.jsp</result>
+		</action>
+		
+		<action name="filterRestaurants" class="listRestaurantsAction" method="filterRestaurants">
+			<result name="success">/restaurant_listing_table.jsp</result>
+		</action>
+
+		<action name="restaurantMenu" class="restaurantMenuAction">
+			<result name="success">/menu_new_fragment.jsp</result>
+		</action>
+		
+		<action name="executeCustomerOrder" class="customerOrderAction" method="executeCustomerOrder">
+			<result name="success">/home.jsp</result>
+		</action>
+		
+		<action name="addToCart" class="customerOrderAction" method="addToCart">
+			<result name="success">/restaurant_cart_items.jsp</result>
+		</action>
+		
+		<action name="updateCart" class="customerOrderAction" method="updateCart">
+			<result name="success">/restaurant_cart_items.jsp</result>
+		</action>
+		
+		<action name="editCart" class="customerOrderAction" method="editCart">
+		</action>
+		
+		<action name="facebookCallback" class="facebookCallbackAction" method="loginFacebook">
+			<result name="success">/home.jsp</result>
+		</action>
+		
+		<action name="checkout" class="checkoutAction">
+			<result name="success">/checkout.jsp</result>
+		</action>
+		
+		<action name="login" class="userAction">
+			<result name="success">/home.jsp</result>
+		</action>
+		
+	</package>
+</struts>

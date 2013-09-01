@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>eatifying-modules</artifactId>
+		<groupId>Eatifying</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>Eatifying</groupId>
+	<artifactId>commons</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>commons</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<repositories>
+		<repository>
+			<id>visural-common</id>
+			<name>visural-common</name>
+			<url>http://visural-common.googlecode.com/svn/trunk/visural-common/maven/</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.visural</groupId>
+			<artifactId>visural-common</artifactId>
+			<version>0.4.3</version>
+		</dependency>
+	</dependencies>
+
+</project>

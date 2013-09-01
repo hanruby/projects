@@ -1,0 +1,40 @@
+<%@taglib uri="/struts-tags" prefix="s"%>
+<header id="site_head">
+<div class="header_cont">
+	<!--useful to create the 960px limit-->
+	<h1>
+		<a href="/eatifying">Mealz 'n' Dealz</a>
+	</h1>
+	<nav class="head_nav">
+	<ul>
+		<li><a href="#">WHY US?<span class="nav-divider nav-divider-cart"></span></a>
+		</li>
+		<li><a href="#">HOW IT WORKS?<span class="nav-divider nav-divider-cart"></span></a>
+		</li>
+		<li><a href="#">BLOG<span class="nav-divider nav-divider-cart"></span></a>
+		</li>
+		<li><a href="#">HELP<span class="nav-divider nav-divider-cart"></span></a>
+		</li>
+		<li><a href="#" onClick="loginPopUp();">LOG IN<span class="nav-divider nav-divider-cart"></a>
+		</li>
+		<li>
+			<div class="cart_holder" style="display:inline;top: -10px">
+				My Bag( <span>0</span> ) dishes
+			</div>
+	
+		</li>
+		
+	</ul>
+	</nav>
+
+</div>
+</header>
+<div id="loginForm" style="display: none">
+	<a href='#' onclick='closeLogin();' style="align: right;">close[X]</a><br>
+	Login using : <a href="/eatifying/fblogin"
+		id="jbrkyzxobeifgtqcokvhdolcjxdtcmna" class="fb_login_link"> <img
+		height="22" title="Connect with Facebook" src="images/fb-login.gif"
+		alt="Connect with Facebook" /> </a>
+
+</div>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.eatifying.dao.CustomerOrderMapper">
+	
+	<select id="getMaxOrderId" resultType="int">
+		SELECT IF((SELECT max(order_id) from customer_order) IS NULL,1,(SELECT max(order_id)+1 from customer_order)) AS value;
+	</select>
+	
+	<insert id="insertOrder" parameterType="com.eatifying.commons.domain.order.CustomerOrder">
+		
+		INSERT INTO customer_order(
+		order_id, order_time, user_confirmation_code, customer_user_id,
+		restaurant_confirmation_code,
+		restaurant_id, total_amount, status
+		)
+		VALUES(
+		#{orderId},
+		now(),
+		#{userConfirmationCode},
+		#{customerUserId},
+		#{restaurantConfirmationCode},
+		#{restaurantId},
+		#{totalAmount}, 
+		#{status}
+		);
+		
+	</insert>
+	
+	<insert id="insertOrderDetail" parameterType="com.eatifying.commons.domain.order.CustomerOrderDetails">
+		INSERT INTO order_details(
+		order_id, item_id, quantity, total_amount, restaurant_id
+		)
+		VALUES(
+		#{orderId},
+		#{restaurantItemId},
+		#{quantity},
+		#{amount},
+		#{restaurantId}
+		);
+		
+	</insert>
+</mapper>

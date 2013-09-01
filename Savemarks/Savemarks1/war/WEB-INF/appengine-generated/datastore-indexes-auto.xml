@@ -1,0 +1,17 @@
+<!-- Indices written at Sun, 15 May 2011 15:55:15 UTC -->
+
+<datastore-indexes>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Bookmark" ancestor="false" source="auto">
+        <property name="user" direction="asc"/>
+        <property name="used" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Bookmark" ancestor="false" source="auto">
+        <property name="user" direction="asc"/>
+        <property name="createdDate" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>

@@ -1,0 +1,1464 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Merienda+One);
+
+@import url("reset.css");
+/*  Reset for some default browser CSS - General */
+body,div,h1,h2,h3,p,ul,ol,li,img,header,section,aside,footer,button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+html,body {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #FFF;
+	/*color: #FD3E4E;*/
+}
+
+a:hover {
+	/*color: #6f92a7;*/
+}
+
+a:focus {
+	outline: 0;
+}
+
+h1,h2,h3 {
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 22px;
+	line-height: 28px;
+	color: #9CAD0F;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.float {
+	float: left;
+}
+
+body {
+	background: #E5E5D8;
+	font: normal 13px/100% Verdana, Tahoma, sans-serif;
+	font-size: 14px;
+	margin: 0 auto;
+	/*background: #EDCD78 url('../images/grey-bg.gif');*/
+	background:#f8f8f8 url('../images/body_bg.gif') repeat;
+	/*width: 960px;*/
+}
+/* Header */
+header#site_head {
+	/*background-color: rgba(163, 2, 2, 0.65);
+	*/
+	-webkit-box-shadow: inset 0 -5px 8px -5px rgba(0, 0, 0, 0.65);
+	-moz-box-shadow: inset 0 -5px 8px -5px rgba(0, 0, 0, 0.65);
+	box-shadow: inset 0 -5px 8px -5px rgba(0, 0, 0, 0.65);
+	height: 60px;
+	
+	/*
+	background: Background;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+	box-shadow: inset 0px -2px 3px #480508;
+	border-bottom: 1px solid #fffffb;
+	height: 60px;
+	/*position: fixed;*/
+	top: 0;
+	left: 0;
+	right: 0;
+	overflow: visible;
+	width: 100%;
+	/* I tried width: 100% but it does not seem to work on the header */
+	margin: 0 auto;
+}
+
+.header_cont { /*width: 960px;*/
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+
+.header_cont h1 {
+	float: left;
+}
+
+.header_cont h1 a {
+	background: Feldspar no-repeat;
+	color: #000;
+	display: block;
+	font-family: 'Merienda One', cursive;
+	font-size: xx-large;
+	text-shadow: rgba(17, 0, 0, 0.5) 0 7px 7px;
+}
+
+.header_cont h1 a:hover {
+	color: white;
+	-webkit-transition: color 0.5s linear;
+}
+
+nav.head_nav {
+	float: right;
+}
+
+nav.head_nav ul li {
+	display: inline;
+	margin: 0px 5px;
+}
+
+nav.head_nav ul li a {
+	font-size: 11px;
+	font-weight: normal;
+	text-transform: capitalize;
+	padding: 5px 8px;
+}
+
+nav.head_nav ul li.home a {
+	background: #4f1d1e;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+/*
+nav.head_nav ul li a:hover {
+	text-shadow: 1px 1px 1px #2c0306;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: inset 0px 0px 2px #2c0306;
+	-khtml-box-shadow: inset 0px 0px 2px #2c0306;
+	-webkit-box-shadow: inset 0px 0px 2px #2c0306;
+	box-shadow: inset 0px 0px 2px #2c0306;
+	background: rgba(233, 15, 15, 0.898);
+	color: #FFF;
+}
+*/
+/* Main container */
+#main_content {
+	width: 960px;
+	margin: 0 auto;
+	/*padding-top: 30px;*/
+	position: relative;
+	/*top: 30px;*/
+	/*
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	
+	border: 1px solid silver;
+	*/
+}
+
+#main-container {
+	background: rgba(233, 15, 15, 0.9);
+	margin: 0 auto;
+	position: relative;
+	-moz-box-shadow: 0 6px 6px rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 6px 6px rgba(255, 255, 255, 0.5);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0 6px 6px rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	box-shadow: 0 6px 6px rgba(255, 255, 255, 0.5);
+	width: 960px;
+	position: relative;
+	top: 30px;
+	border: 3px solid silver;
+	height: 400px;
+	/*height: 100%;*/
+}
+
+.left_cont {
+	float: left;
+	width: 447px;
+}
+
+aside {
+	float: right;
+	width: 447px;
+}
+
+aside article form {
+	margin: 0 auto;
+	width: 73%;
+}
+
+aside article form input { /*float: left;*/
+	width: 325px;
+	color: #666;
+	font-size: 15px;
+	border: 1px solid;
+	padding: 9px 10px 5px;
+	-moz-box-shadow: 1px 1px 5px #aaaaaa inset;
+	-webkit-box-shadow: 1px 1px 5px #aaaaaa inset;
+	box-shadow: 1px 1px 5px #aaaaaa inset;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border-color: #A3A3A3 #C3C3C3 #DADADA;
+}
+
+.submit-btn {
+	margin: 1em;
+	display: block;
+	background: #f60;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	padding: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, .2), 0px 0px 3px
+		rgba(0, 0, 0, .1), inset 0px 5px 12px #930, inset 0px 15px 2px
+		rgba(240, 150, 69, .5), inset 0px 25px 25px #930;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, .2), 0px 0px 3px rgba(0, 0, 0, .1),
+		inset 0px 5px 12px #930, inset 0px 15px 2px rgba(240, 150, 69, .5),
+		inset 0px 25px 25px #930;
+	-moz-box-shadow: 3px 3px 6px rgba(0, 0, 0, .2), 0px 0px 3
+		pxrgba(0, 0, 0, .1), inset 0px 5px 12px #930, inset 0px 15px 2
+		pxrgba(240, 150, 69, .5), inset 0px 25px 25px #930;
+}
+
+.submit-btn:hover,.submit-btn:focus {
+	background: #f82;
+	color: #fff;
+	-webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .4), 0px 0px 3px
+		rgba(0, 0, 0, .1), inset 0 0 4px rgba(0, 0, 0, .6), inset 0px 10px
+		12px #930, inset 0px 20px 2px rgba(240, 150, 69, .5), inset 0px 25px
+		25px #930;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, .4), 0px 0px 3px rgba(0, 0, 0, .1),
+		inset 0 0 4px rgba(0, 0, 0, .6), inset 0px 10px 12px #930, inset 0px
+		20px 2px rgba(240, 150, 69, .5), inset 0px 25px 25px #930;
+	-moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .4), 0px 0px 3
+		pxrgba(0, 0, 0, .1), inset 0 0 4px rgba(0, 0, 0, .6), inset 0px 10
+		px12px #930, inset 0px 20px 2px rgba(240, 150, 69, .5), inset 0px 25
+		px25px #930;
+}
+/* Footer */
+footer.bottom {
+	clear: both;
+	display: block;
+	margin-top: 45px;
+	background: black url(../images/footer_bg.png) top left repeat- x;
+	background-image: url(../images/footer_bg.png);
+	background-repeat-x: repeat;
+	background-repeat-y: no-repeat;
+	background-attachment: initial;
+	background-position-x: 0%;
+	background-position-y: 0%;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: black;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	border-top: 1px solid #c9c9c0;
+	height: 50px;
+	position: relative;
+	bottom: 0px;
+	width: 100%;
+	left: 0px;
+	overflow: hidden;
+	top: 50px;
+	/*margin: -80px 0 0;*/
+}
+
+nav.foot_nav {
+	clear: both;
+	float: left;
+	margin-top: 14px;
+}
+
+nav.foot_nav ul li {
+	display: inline;
+	margin: 0px 5px;
+}
+
+nav.foot_nav ul li a {
+	color: #f6f6ee;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: capitalize;
+	padding: 5px 8px;
+}
+
+nav.foot_nav ul li.home a {
+	background: #4f1d1e;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+/*
+nav.foot_nav ul li a:hover {
+	text-shadow: 1px 1px 1px #2c0306;
+	-moz-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: inset 0px 0px 2px #2c0306;
+	-khtml-box-shadow: inset 0px 0px 2px #2c0306;
+	-webkit-box-shadow: inset 0px 0px 2px #2c0306;
+	box-shadow: inset 0px 0px 2px #2c0306;
+	background: rgba(233, 15, 15, 0.898);
+	color: #FFF;
+}*/
+
+article {
+	margin: 15px 0;
+	padding: 20px;
+	/*background: rgba(204, 204, 204, 0.3);*/
+	/*border-radius: 11px;*/
+	/*border: 1px solid gray;*/
+	/*overflow: hidden;*/
+}
+
+.restricted_content {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 8px;
+}
+
+.follow {
+	float: right;
+}
+
+.follow .follow-text {
+	color: #F6F6EE;
+	font-size: large;
+	font-weight: bolder;
+	text-transform: capitalize;
+	padding: 0px 8px;
+	display: inline-block;
+	position: relative;
+	top: -13px;
+}
+
+.follow .twitter {
+	background-position: 0px 0px;
+}
+
+.follow .facebook {
+	background-position: 0px -45px;
+}
+
+.follow a {
+	background: url('../images/icons.png') no-repeat;
+	height: 35px;
+	width: 35px;
+	display: inline-block;
+	border: 1px solid transparent;
+}
+
+.follow a:hover {
+	border: 1px solid gold;
+	-webkit-transition: border 0.5s linear;
+}
+
+.nivoSlider {
+	position: relative;
+	width: 353px; /* Change this to your images width */
+	height: 270px; /* Change this to your images height */
+	border: 3px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+.nivoSlider img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+.nivoSlider a {
+	border: 0;
+	display: none;
+}
+
+.nivo-directionNav a {
+	display: block;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 5px;
+}
+
+.form-title {
+	text-align: center;
+	display: block;
+	font-size: large;
+	color: black;
+	padding: 5px;
+}
+
+div.separator {
+	clear: both;
+	border-top: 1px solid black;
+	width: 100%;
+}
+
+.three-column {
+	width: 30%;
+	float: left;
+	padding: 0 15px;
+}
+
+#filter {
+	float: left;
+	width: 25%;
+	color: rgb(136, 136, 136);
+	text-align: left;
+	border-top-left-radius: 9px 9px;
+	border-top-right-radius: 9px 9px;
+	border-bottom-right-radius: 9px 9px;
+	border-bottom-left-radius: 9px 9px;
+	-webkit-box-shadow: rgb(238, 232, 170) 0px 0px 9px;
+	box-shadow: rgb(238, 232, 170) 0px 0px 9px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: rgb(0, 0, 0);
+	border-right-color: rgb(0, 0, 0);
+	border-bottom-color: rgb(0, 0, 0);
+	border-left-color: rgb(0, 0, 0);
+	outline-width: 0px;
+	outline-style: solid;
+	outline-color: rgb(0, 0, 0);
+	opacity: 1;
+	background-color: rgb(255, 255, 255);
+	padding-top: 11px;
+	padding-right: 11px;
+	padding-bottom: 11px;
+	padding-left: 11px;
+	postion: relative;
+	height: 100%;
+}
+
+#restaurantsTableDiv {
+	float: right;
+	width: 70%;
+	padding-left: 20px;
+	postion: relative;
+	height: 100%;
+}
+
+.checkbox {
+	width: 19px;
+	height: 25px;
+	padding: 0 5px 0 0;
+	display: block;
+	clear: left;
+	float: left;
+}
+
+#menuselection {
+	height: 100%;
+	width: 100%;
+	postion: relative;
+	overflow: hidden;
+	padding: 10px 20px 10px 20px;
+	margin: 0 0 10px -10px!important;
+	background-color: white;
+}
+
+#userReview {
+	height: 100%;
+	width: 100%;
+	postion: relative;
+	overflow: hidden;
+}
+
+#listrestaurants {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+hr {
+	display: block;
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+
+.filter input[type=text],textarea {
+	padding: 8px;
+	margin: 3px 2px 3px 2px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	font: normal 13px/100% Verdana, Tahoma, sans-serif;
+	width: 175px;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF),
+		color-stop(4%, #EEEEEE), to(#FFFFFF) );
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+
+textarea {
+	width: 400px;
+	max-width: 400px;
+	height: 150px;
+	line-height: 150%;
+}
+
+.filter input[type=text]:hover,textarea:hover,input[type=text]:focus,textarea:focus
+	{
+	border-color: #C9C9C9;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+}
+
+.restaurantsTable .table {
+	border-collapse: collapse;
+	-webkit-box-shadow: rgb(238, 232, 170) 0px 0px 9px;
+	box-shadow: rgb(238, 232, 170) 0px 0px 9px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: rgb(0, 0, 0);
+	border-right-color: rgb(0, 0, 0);
+	border-bottom-color: rgb(0, 0, 0);
+	border-left-color: rgb(0, 0, 0);
+}
+
+.restaurantsTable .table tbody tr td,.restaurantsTable .table thead tr th
+	{
+	background: #fff;
+	padding: 6px 8px;
+	color: #444;
+	text-align: center;
+}
+
+.restaurantsTable .table thead tr th {
+	background: #ccc;
+	/*color: #00659D;*/
+	color: #9CAD0F;
+	font-weight: bold;
+	text-align: center;
+}
+
+.restaurantsTable .table tr td a { /*color: #00659D;*/
+	color: #9CAD0F;
+}
+
+.restaurantsTable .table .alignleft {
+	text-align: left;
+}
+/*
+#top_content {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow: 0px 0px 5px #EEE8AA;
+	-moz-box-shadow: 0px 0px 5px #EEE8AA;
+	box-shadow: 0px 0px 5px #EEE8AA;
+	background-image: -moz-linear-gradient(top, #D3D3D3, #F0F0EB );
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #D3D3D3), color-stop(1.0, #F0F0EB ));
+	background-color: #DDDDDD;
+	padding: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12pt;
+	color: #888888;
+	text-align: center;
+	overflow: hidden;
+	
+}
+*/
+#restMenuLeft {
+	width: 62%;
+	float: left;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#restMenuRight {
+	width: 37%;
+	float: right;
+	height: 100%;
+	position: relative;
+}
+
+#restaurantMain {
+	background-color: #FFFFFF;
+	background: rgba(255, 255, 255, 0.9);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	font-family: 'Lucida Grande', Lucida, Verdana, sans-serif;
+	font-size: 11px;
+}
+
+#restaurantDetails {
+	width: 100%;
+	position: relative;
+	display: block;
+	height: 100%;
+	background-color: #FFFFFF;
+	background: rgba(255, 255, 255, 0.9);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#userReview {
+	width: 100%;
+	display: block;
+	position: relative;
+	height: 100%;
+	background-color: #FFFFFF;
+	background: rgba(255, 255, 255, 0.9);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#orderInfo {
+	min-height: 50px;
+	color: #FFFFFF;
+	background-color: #000000;
+	background: rgba(0, 0, 0, 0.8);
+	margin: 0 auto;
+	position: relative;
+	padding: 18px 0;
+	/*
+	-moz-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	*/
+}
+
+#checkOut {
+	min-height: 20px;
+	color: #FFFFFF;
+	background-color: #000000;
+	background: rgba(0, 0, 0, 0.8);
+	position: relative;
+	padding: 18px 0;
+	-moz-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+#mostOrdered {
+	height: 250px;
+	color: #FFFFFF;
+	margin-top: 10px;
+	background-color: #000000;
+	background: rgba(0, 0, 0, 0.8);
+	position: relative;
+	padding: 18px 0;
+	/*
+	-moz-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	*/
+}
+
+#orderInfo h3, #checkOut h3, #mostOrdered h3 {
+	border-bottom:1px solid silver;
+}
+
+.floatLeft {
+	float: left;
+}
+
+#menuItems1 {
+	border: 0;
+	width: 49%;
+}
+
+#menuItems2 {
+	border: 0;
+	width: 49%;
+	float: right;
+}
+
+
+#menuItems1 tr,#menuItems2 tr {
+	height: 20px;
+	vertical-align: middle;
+	border-bottom: 1px solid silver;
+}
+
+
+#restaurantCartItems, #mostOrderedItems { 
+	color: #FFFFFF;
+	float: left;
+	width: 100%;
+}
+
+#restaurantCartItems tr ,#mostOrderedItems tr{ 
+	border-bottom: 1px dotted #DDD;
+}
+
+p.ordermore {
+	font-size: 14px;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 20px;
+	color: yellowGreen;
+}
+#restaurantMain h5 a {
+	font-size: 16px;
+	font-weight: bold;
+	color: #9CAD0F;
+}
+
+.cart_holder {
+	position: relative;
+	float: right;
+	color: white;
+	margin-top: 5px;
+	margin-right: 5px;
+	padding: 5px;
+	background: #9CAD0F;
+	/*background: #008080;*/
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+#menuItems2 .quantity,#menuItems1 .quantity {
+	width: 20px;
+	margin-right: 10px;
+	height: 15px;
+	padding: 0;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+
+
+/* Styles used for the sliding effect */
+.stripViewer .panelContainer .panel ul {
+	text-align: left;
+	/*margin: 0 15px 0 30px;*/
+}
+
+.slider-wrap {
+	/* This div isn't entirely necessary but good for getting the side arrows vertically centered */
+	margin: 20px 0;
+	position: relative;
+	width: 100%;
+}
+
+/* These 2 lines specify style applied while slider is loading */
+.csw {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	overflow: scroll
+}
+
+.csw .loading {
+	margin: 200px 0 300px 0;
+	text-align: center
+}
+
+.stripViewer { /* This is the viewing window */
+	position: relative;
+	overflow: hidden;
+	/*border: 5px solid #000; */
+	/* this is the border. should have the same value for the links */
+	margin: auto;
+	width: 960px;
+	/* Also specified in  .stripViewer .panelContainer .panel  below */
+	height: 100%;
+	clear: both;
+	background: #E5E5D8;
+}
+
+.stripViewer .panelContainer {
+	/* This is the big long container used to house your end-to-end divs. Width is calculated and specified by the JS  */
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	list-style-type: none;
+	/* -moz-user-select: none; // This breaks CSS validation but stops accidental (and intentional - beware) panel highlighting in Firefox. Some people might find this useful, crazy fools. */
+}
+
+.stripViewer .panelContainer .panel {
+	/* Each panel is arranged end-to-end */
+	float: left;
+	height: 100%;
+	position: relative;
+	width: 960px; /* Also specified in  .stripViewer  above */
+}
+
+.stripViewer .panelContainer .panel .wrapper {
+	/* Wrapper to give some padding in the panels, without messing with existing panel width */
+	padding: 10px;
+}
+
+.stripNav {
+	/* This is the div to hold your nav (the UL generated at run time) */
+	margin: auto;
+	display: none;
+}
+
+.stripNav ul { /* The auto-generated set of links */
+	list-style: none;
+}
+
+.stripNav ul li {
+	float: left;
+	margin-right: 2px;
+	/* If you change this, be sure to adjust the initial value of navWidth in coda-slider.1.1.1.js */
+}
+
+.stripNav a { /* The nav links */
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 32px;
+	background: #c6e3ff;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 0 15px;
+}
+
+.stripNav li.tab1 a {
+	background: #60f
+}
+
+.stripNav li.tab2 a {
+	background: #60c
+}
+
+.stripNav li.tab3 a {
+	background: #63f
+}
+
+.stripNav li.tab4 a {
+	background: #63c
+}
+
+.stripNav li.tab5 a {
+	background: #00e
+}
+
+.stripNav li a:hover {
+	background: #333;
+}
+
+.stripNav li a.current {
+	background: #000;
+	color: #fff;
+}
+
+.stripNavL,.stripNavR { /* The left and right arrows */
+	position: absolute;
+	top: 230px;
+	text-indent: -9000em;
+	display: none;
+}
+
+.stripNavL a,.stripNavR a {
+	display: block;
+	height: 40px;
+	width: 40px;
+}
+
+.stripNavL {
+	left: 0;
+}
+
+.stripNavR {
+	right: 0;
+}
+
+.stripNavL {
+	background: url("../images/arrow-left.gif") no-repeat center;
+}
+
+.stripNavR {
+	background: url("../images/arrow-right.gif") no-repeat center;
+}
+
+body {
+	font: 71%/165% "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+ul,li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#crumbs {
+	height: 2.3em;
+	border: 1px solid #dedede;
+}
+
+#crumbs li {
+	float: left;
+	line-height: 2.3em;
+	color: #777;
+	padding-left: .75em;
+}
+
+#crumbs li a {
+	background: url(../images/crumbs.gif) repeat right center;
+	display: block;
+	padding: 0 15px 0 0;
+}
+
+#crumbs li a:link,#crumbs li a:visited {
+	color: #777;
+	text-decoration: none;
+}
+
+
+/*a:link,a:visited,*/
+#crumbs li a:hover,#crumbs li a:focus {
+	color: #dd2c0d;
+}
+
+
+/* Start of Find Food Button Styles*/ 
+.largewhite {
+font-family: "museo-slab-1","museo-slab-2"!important;
+font-size: 22px;
+font-weight: 700;
+height: 33px;
+text-transform: uppercase;
+color: white;
+line-height: 1.75em;
+}
+
+.findfoodbutton {
+background-image: url(../images/splash-bars.png);
+background-position: -12px -158px;
+padding-left: 10px;
+width: 260px;
+height: 33px;
+display: inline-block;
+background-repeat: no-repeat;
+cursor: pointer;
+outline: 0;
+}
+
+.chzn-container-single .chzn-single span {
+	font-size: 15px;
+	color:#666;
+}
+/* End of Find Food Button Styles*/
+
+// Adding styles for default placeholder
+::-webkit-input-placeholder {
+    color:    #666;
+}
+:-moz-placeholder {
+    color:    #666;
+}
+input::-webkit-input-placeholder {
+    color:    #999;
+}
+input:-moz-placeholder {
+    color:    #999;
+}
+
+.nav-divider {
+border-right: 1px solid #DDD;
+position: absolute;
+height: 25px;
+width: 1px;
+overflow: hidden;
+top: 11px;
+padding-left: 10px;
+}
+
+div.bl_nav_top_bag_text {
+width: 230px;
+float: left;
+text-align: right;
+padding: 40px 0px 0px 0px;
+font-weight: bold;
+}
+
+.bl_nav_top_bag_text, .r_nav_top_bag_text {
+position: relative;
+}
+
+div.bl_nav_top_links {
+width: 230px;
+text-align: right;
+font-size: 9px;
+}
+
+tr.firstRow {
+color:darkBlue;
+text-align:left;
+font-weight:bold;
+}
+
+#restMenuLeft .info, #restMenuLeft .ready-time {
+background: url(../images/icon_min_order.png) top left no-repeat;
+margin: 0;
+padding: 1px 0 4px 26px;
+min-height: 22px;
+}
+
+.container {
+width: 940px;
+margin: 0 auto;
+padding: 0;
+display: block;
+position: relative;
+clear: both;
+}
+
+.container#consumerCheckout {
+float: left;
+padding: 10px 20px 10px 20px;
+margin: 0 0 10px -20px!important;
+background-color: white;
+}
+
+.left {
+float: left!important;
+}
+
+.eightcol {
+width: 620px;
+}
+
+.onecol,.twocol,.threecol,.fourcol,.fourcoldate,.fivecol,.sixcol,.sevencol,.eightcol,.ninecol,.tencol,.elevencol
+	{
+display: inline;
+float: left;
+position: relative;
+margin-left: 10px;
+margin-right: 10px;
+padding-bottom: 10px;
+}
+
+input, textarea, select {
+font-family: Arial,sans-serif;
+font-size: 12px;
+color: #555;
+margin: .25em 0 .75em 0!important;
+-moz-box-shadow: inset 0 1px 2px #999;
+-webkit-box-shadow: inset 0 1px 2px #999;
+box-shadow: inset 0 1px 2px #999;
+cursor: default!important;
+}
+
+a,a:visited,a:hover,a:focus,input,input:visited,input:hover,input:focus,div.active
+	{
+outline: 0!important;
+cursor: hand;
+}
+
+a:hover {
+    color: #000;
+    border-bottom: 1px dotted #252525;
+}
+
+#consumerCheckout a {
+text-decoration: none;
+color: #399;
+}
+
+.checkout {
+display: block;
+clear: both;
+margin-top: 12px;
+}
+
+#UserInformations {
+display: block;
+margin-top: 12px;
+}
+
+.first {
+margin-left: 0!important;
+clear: both;
+}
+
+br.clear {
+clear: both;
+line-height: 0;
+display: block;
+}
+
+#SideBar {
+margin-top: 0px !important;
+}
+#SideBar {
+margin-top: 10px;
+background: white;
+z-index: 3!important;
+}
+.right {
+float: right!important;
+}
+.fourcol {
+width: 300px;
+}
+.last {
+margin-right: 0!important;
+}
+
+.border {
+border: 1px #CCC solid;
+padding: 10px;
+margin-bottom: 20px;
+border-image: initial;
+}
+
+#checkoutForm h1 {
+font-size: 24px;
+margin-top: 0 !important;
+padding-top: 0 !important;
+}
+
+#checkoutForm h1, #checkoutForm h2 {
+font-family: "museo-slab-1" , "museo-slab-2";
+font-weight: 800;
+padding: 10px 0 5px 0;
+margin-bottom: 5px;
+color: #9CAD0F;
+border-bottom: dotted 1px #DDD;
+}
+
+#checkoutForm h1 span, #checkoutForm h2 span {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #C90117;
+font-weight: bold;
+}
+
+.checkout .form-field input[type="text"],.checkout .form-field input[type="password"]
+	{
+padding-left: 4px;
+}
+
+.checkout .form-field .xlarge {
+width: 100%;
+clear: both;
+}
+.auxinst input, .checkout input {
+display: inline;
+margin-top: 2px;
+}
+
+input[type="text"],input[type="password"],input[type="button"],input[type="submit"],textarea,select
+	{
+border: 1px solid #999;
+border-image: initial;
+}
+input[type="text"], input[type="password"] {
+padding: 5px 0;
+}
+
+.checkout label {
+font-size: 12px !important;
+clear: both;
+}
+
+.form-field label {
+color: #555;
+line-height: 1.5em;
+position: relative;
+margin: 0;
+width: 124px!important;
+clear: both;
+}
+
+.checkout .form-field, .checkout #UserInformations .form-field {
+width: 300px;
+display: inline;
+float: left;
+position: relative;
+margin: 10px 10px 0px 10px;
+}
+.first {
+margin-left: 0!important;
+clear: both;
+}
+
+#floatMenu {
+    position:absolute;
+    top:23px;
+    left:50%;
+    margin-left:125px;
+    width:350px;
+}
+
+  
+ #info dl {
+  clear:both;
+  width:100%;
+}
+#info dd.first {
+  width:5%; 
+  float:left; 
+  margin:0;} 
+  #info dd.second {
+  width:5%; 
+  float:left; 
+  margin:0;} 
+  #info dd.third {
+  width:80%; 
+  float:left; 
+  margin:0;} 
+  #info dd.fourth {
+  width:10%; 
+  float:left; 
+  margin:0;} 
+  
+  #jSuccess1 {
+	background: #E6EFC2 url('../images/success.png') no-repeat 15px center;
+	color: #264409;
+	border: 1px solid #C6D880;
+	z-index: 9999;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	position: absolute;
+	top: 11px;
+	left: 35%;
+	min-width: 150px;
+	color: #264409;
+	border: 1px solid #C6D880;
+	padding: 3px;
+	padding-left: 50px;
+	
+}
+
+#login {
+	background-color: #fff;
+	position:absolute;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff),
+		to(#eee) );
+	background-image: -webkit-linear-gradient(top, #fff, #eee);
+	background-image: -moz-linear-gradient(top, #fff, #eee);
+	background-image: -ms-linear-gradient(top, #fff, #eee);
+	background-image: -o-linear-gradient(top, #fff, #eee);
+	background-image: linear-gradient(top, #fff, #eee);
+	height: 240px;
+	width: 400px;
+	margin: -150px 0 0 -230px;
+	padding: 30px;
+	top: 50%;
+	left: 50%;
+	z-index: 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px
+		rgba(0, 0, 0, .2), 0 3px 0 #fff, 0 4px 0 rgba(0, 0, 0, .2), 0 6px 0
+		#fff, 0 7px 0 rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, .1),
+		3px 3px 0 rgba(255, 255, 255, 1), 4px 4px 0 rgba(0, 0, 0, .1), 6px 6px
+		0 rgba(255, 255, 255, 1), 7px 7px 0 rgba(0, 0, 0, .1);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, .2), 0
+		3px 0 #fff, 0 4px 0 rgba(0, 0, 0, .2), 0 6px 0 #fff, 0 7px 0
+		rgba(0, 0, 0, .2);
+}
+
+#login:before {
+	content: '';
+	z-index: -1;
+	border: 1px dashed #ccc;
+	top: 5px;
+	bottom: 5px;
+	left: 5px;
+	right: 5px;
+	-moz-box-shadow: 0 0 0 1px #fff;
+	-webkit-box-shadow: 0 0 0 1px #fff;
+	box-shadow: 0 0 0 1px #fff;
+}
+
+#login h1 {
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0
+		rgba(0, 0, 0, .5);
+	text-transform: uppercase;
+	text-align: center;
+	color: #666;
+	margin: 0 0 30px 0;
+	letter-spacing: 4px;
+	font: normal 26px/1 Verdana, Helvetica;
+	position: relative;
+}
+
+#login h1:after,#login h1:before {
+	background-color: #777;
+	content: "";
+	height: 1px;
+	position: absolute;
+	top: 15px;
+	width: 120px;
+}
+
+#login h1:after {
+	background-image: -webkit-gradient(linear, left top, right top, from(#777),
+		to(#fff) );
+	background-image: -webkit-linear-gradient(left, #777, #fff);
+	background-image: -moz-linear-gradient(left, #777, #fff);
+	background-image: -ms-linear-gradient(left, #777, #fff);
+	background-image: -o-linear-gradient(left, #777, #fff);
+	background-image: linear-gradient(left, #777, #fff);
+	right: 0;
+}
+
+#login h1:before {
+	background-image: -webkit-gradient(linear, right top, left top, from(#777),
+		to(#fff) );
+	background-image: -webkit-linear-gradient(right, #777, #fff);
+	background-image: -moz-linear-gradient(right, #777, #fff);
+	background-image: -ms-linear-gradient(right, #777, #fff);
+	background-image: -o-linear-gradient(right, #777, #fff);
+	background-image: linear-gradient(right, #777, #fff);
+	left: 0;
+}
+
+#inputs input {
+	background: #f1f1f1;
+	padding: 15px 15px 15px 30px;
+	margin: 0 0 10px 0;
+	width: 353px; /* 353 + 2 + 45 = 400 */
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+	-webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+	box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+
+#username {
+	background-position: 5px -2px !important;
+}
+
+#password {
+	background-position: 5px -52px !important;
+}
+
+#inputs input:focus {
+	background-color: #fff;
+	border-color: #e8c291;
+	outline: none;
+	-moz-box-shadow: 0 0 0 1px #e8c291 inset;
+	-webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+	box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+
+#loginsubmit {
+	background-color: #ffb94b;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f),
+		to(#ffb94b) );
+	background-image: -webkit-linear-gradient(top, #fddb6f, #ffb94b);
+	background-image: -moz-linear-gradient(top, #fddb6f, #ffb94b);
+	background-image: -ms-linear-gradient(top, #fddb6f, #ffb94b);
+	background-image: -o-linear-gradient(top, #fddb6f, #ffb94b);
+	background-image: linear-gradient(top, #fddb6f, #ffb94b);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0
+		rgba(255, 255, 255, 0.3) inset;
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0
+		rgba(255, 255, 255, 0.3) inset;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3)
+		inset;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #d69e31 #e3a037 #d5982d #e3a037;
+	float: left;
+	height: 35px;
+	padding: 0;
+	width: 120px;
+	cursor: pointer;
+	font: bold 15px Arial, Helvetica;
+	color: #8f5a0a;
+}
+
+#loginsubmit:hover,#loginsubmit:focus {
+	background-color: #fddb6f;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b),
+		to(#fddb6f) );
+	background-image: -webkit-linear-gradient(top, #ffb94b, #fddb6f);
+	background-image: -moz-linear-gradient(top, #ffb94b, #fddb6f);
+	background-image: -ms-linear-gradient(top, #ffb94b, #fddb6f);
+	background-image: -o-linear-gradient(top, #ffb94b, #fddb6f);
+	background-image: linear-gradient(top, #ffb94b, #fddb6f);
+}
+
+#loginsubmit:active {
+	outline: none;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+
+#loginsubmit::-moz-focus-inner {
+	border: none;
+}
+
+div.expandable_note_box {
+		width: 210px;
+		min-height: 100px;
+		background-image: url("../images/top.jpg");
+		background-position: top left;
+		background-repeat: no-repeat;
+		padding-top: 20px;
+		font-size: 80%;
+	}
+	
+	div.expandable_note_box div.middle {
+		width: 210px;
+		background-image: url("../images/middle.jpg");
+		background-position: center;
+		background-repeat: repeat-y;
+		
+	}
+	
+	div.expandable_note_box div.inside {
+		padding-left: 20px;
+		width: 167px;
+	}

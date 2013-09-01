@@ -1,0 +1,6 @@
+cd C:\apache-tomcat\apache-tomcat-6.0.29\webapps
+rd /s /q eatifying
+del eatifying.war
+xcopy C:\Users\narayan\workspace\Eatifying\eatifying-modules\web\target\eatifying.war C:\apache-tomcat\apache-tomcat-6.0.29\webapps
+cd C:\apache-tomcat\apache-tomcat-6.0.29\bin
+catalina.bat run

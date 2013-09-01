@@ -1,0 +1,30 @@
+<div id="below-header-wrapper">
+	<div id="below-header" class="content">
+		<h2></h2>
+		<div class="other"><ul><li style="color: white">1.Fill Address  </li><li class="separator">|</li><li> 2.Search </li><li class="separator">|</li><li> 3.Order </li><li class="separator">|</li><li> 4.Checkout</li><ul></div>
+		<div class="search">
+			<!--form action="/search" method="get">
+				<input type="text" placeholder="search for favorite restaurants and food" id="search-q" name="q" autocomplete="off" />
+				<input type="button" id="search-button" value="" />
+			</form-->
+			<div class="search-text">
+				<!--a><b>Cart</b> (<span id="item_count_in_cart_top_displayed">0</span>)</a-->
+				<div id="yfc_mini" style="float:right">
+					<div class="smb-mc">
+						<div id="yfc_minicart" class="minicart_c1">
+							<div id="yfc_mini_align" class="mini_align"></div>
+							<span id="yfc_sub_total_mini" class="mini_subtotal">&#x20B9;0.00</span>
+							<span id="yfc_total_items_mini" class="mini_item_count">0 Item(s)</span>
+							<span id="yfc_show_mini" class="mini_msg">Shopping Cart</span>
+							<span id="yfc_mini_icon" class="mini_icon"></span>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>			
+				
+		
+	</div>
+</div>
+			

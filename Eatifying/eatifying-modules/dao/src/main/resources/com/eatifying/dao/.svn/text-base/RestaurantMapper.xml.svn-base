@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.eatifying.dao.RestaurantMapper">
+
+	<!-- insert id="addRestaurant" parameterClass="com.eatifying.commons.domain.Restaurant">
+	</insert-->
+	
+	<select id = "getRestaurantsInCity" parameterType="String" resultType="com.eatifying.commons.domain.restaurant.Restaurant">
+		SELECT a.restaurant_id as restaurantId,
+               a.restaurant_name as restaurantName,
+               a.restaurant_email_id as restaurantEmail,
+               a.restaurant_phone as restaurantPhone,
+               b.latitude as 'restaurantAddress.latitude',
+               b.longitude as 'restaurantAddress.longitude',
+               b.address_line1 as 'restaurantAddress.addressLine1',
+               b.address_line2 as 'restaurantAddress.addressLine2',
+               b.place_name as 'restaurantAddress.place',
+               b.zipcode as 'restaurantAddress.zipcode',
+               b.directions as 'restaurantAddress.directions',
+               c.restaurant_id as 'restaurantDetails.restaurantId',
+               c.about_restaurant_gist as 'restaurantDetails.aboutRestaurantGist',
+               c.about_restaurant as 'restaurantDetails.aboutRestaurant',
+               c.restaurant_website as 'restaurantDetails.restuarantWebsite',
+               c.restaurant_menu_id as 'restaurantDetails.restaurantMenuId',
+               c.opening_time as 'restaurantDetails.openingTime',
+               c.closing_time as 'restaurantDetails.closingTime',
+               c.cost_type_id as 'restaurantDetails.costType.costTypeId',
+               c.delivery_time as 'restaurantDetails.deliveryTime',
+               c.cusine_id as 'restaurantDetails.cusine.cusineId',
+               c.rating_id as 'restaurantDetails.rating.ratingId',
+               c.restaurant_added_date as 'restaurantDetails.restaurantAddedDate'
+		FROM eatifying.restaurant a
+        JOIN eatifying.restaurant_address b
+            ON (a.restaurant_address_id = b.restaurant_address_id)
+        JOIN eatifying.restaurant_details c
+            ON (a.restaurant_id = c.restaurant_id)
+        WHERE city_name = #{id}#    
+	</select>
+	
+	<select id = "getCusineTypes" resultType="com.eatifying.commons.domain.restaurant.Cusine">
+		SELECT cusine_id as 'cusineId',
+		       cusine_name as 'cusineName',
+		       cusine_description as 'cusineDesc'
+		FROM
+		eatifying.cusine_type;
+	</select>
+	
+	<select id = "getRatingDetails" resultType="com.eatifying.commons.domain.restaurant.RatingDetails">
+		SELECT rating_id as 'ratingId',
+		       rating_name as 'ratingName',
+		       rating_description as 'ratingDesc'
+		FROM
+		eatifying.rating_details;
+	</select>
+	
+	<select id = "getCostTypes" resultType="com.eatifying.commons.domain.restaurant.CostType">
+		SELECT cost_type_id as 'costTypeId',
+		       cost_type_name as 'costTypeName',
+		       cost_description as 'costTypeDesc'
+		FROM
+		eatifying.cost_type;
+	</select>
+	
+	<select id = "getRestaurantById" parameterType="int" resultType="com.eatifying.commons.domain.restaurant.Restaurant">
+		SELECT a.restaurant_id as restaurantId,
+               a.restaurant_name as restaurantName,
+               a.restaurant_email_id as restaurantEmail,
+               a.restaurant_phone as restaurantPhone,
+               b.latitude as 'restaurantAddress.latitude',
+               b.longitude as 'restaurantAddress.longitude',
+               b.address_line1 as 'restaurantAddress.addressLine1',
+               b.address_line2 as 'restaurantAddress.addressLine2',
+               b.place_name as 'restaurantAddress.place',
+               b.zipcode as 'restaurantAddress.zipcode',
+               b.directions as 'restaurantAddress.directions',
+               c.restaurant_id as 'restaurantDetails.restaurantId',
+               c.about_restaurant_gist as 'restaurantDetails.aboutRestaurantGist',
+               c.about_restaurant as 'restaurantDetails.aboutRestaurant',
+               c.restaurant_website as 'restaurantDetails.restuarantWebsite',
+               c.restaurant_menu_id as 'restaurantDetails.restaurantMenuId',
+               c.opening_time as 'restaurantDetails.openingTime',
+               c.closing_time as 'restaurantDetails.closingTime',
+               c.cost_type_id as 'restaurantDetails.costType.costTypeId',
+               c.delivery_time as 'restaurantDetails.deliveryTime',
+               c.cusine_id as 'restaurantDetails.cusine.cusineId',
+               c.rating_id as 'restaurantDetails.rating.ratingId',
+               c.restaurant_added_date as 'restaurantDetails.restaurantAddedDate'
+		FROM eatifying.restaurant a
+        JOIN eatifying.restaurant_address b
+            ON (a.restaurant_address_id = b.restaurant_address_id)
+        JOIN eatifying.restaurant_details c
+            ON (a.restaurant_id = c.restaurant_id)
+        WHERE a.restaurant_id = #{id}#
+	</select>
+	
+	<select id = "getRestaurantMinAmountDetails" resultType="com.eatifying.commons.domain.restaurant.RestaurantMinDistanceDetails">
+		SELECT restaurant_min_map_id as 'restaurantMinDistId',
+       		   restaurant_id as 'restaurantId',
+               distance as 'minDistance',
+               min_amount as 'minAmount'
+        FROM eatifying.restaurant_min_amount_map
+		WHERE restaurant_id = #{id}#
+		ORDER BY min_amount
+	</select>
+	
+	<select id="getRestaurantReviews" parameterType="int" resultType="com.eatifying.commons.domain.restaurant.RestaurantReview">
+		SELECT id,review,user,review.source_id as 'source.sourceId', source as 'source.source',source_website as 'source.website' 
+		FROM restaurant_reviews review 
+		JOIN review_source source
+			ON review.source_id = source.source_id
+		WHERE restaurant_id = #{id}#
+	</select>	
+</mapper>
